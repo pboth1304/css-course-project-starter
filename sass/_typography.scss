@@ -1,0 +1,83 @@
+// Placeholder Selectors
+%heading {
+    font-family: var(--font-family-heading);
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.heading {
+    &-1 {
+        @extend %heading;
+        font-size: 8rem;
+        color: var(--color-primary);
+        line-height: 140%;
+
+        &--prefix {
+            font-weight: 500;
+        }
+
+        &--animated {
+            animation-name: fade-in-left;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            backface-visibility: hidden;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 6rem;
+        }
+    }
+
+    &-2 {
+        @extend %heading;
+        font-size: 5rem;
+        color: var(--color-primary);
+        font-weight: 500;
+        line-height: 120%;
+    }
+
+    &-3 {
+        @extend %heading;
+        font-size: 3rem;
+        line-height: 100%;
+        text-transform: uppercase;
+
+        &--light {
+            color: var(--color-grey-light-2);
+        }
+
+        &--dark {
+            color: var(--color-secondary);
+        }
+
+        &--animated {
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: 1;
+            backface-visibility: hidden;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &-4 {
+        @extend %heading;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--color-secondary);
+    }
+
+    &-5 {
+        @extend %heading;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--color-primary);
+        text-transform: uppercase;
+    }
+}

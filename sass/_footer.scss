@@ -1,0 +1,35 @@
+.footer {
+    grid-column: full-start / full-end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem 0;
+    background-color: var(--color-secondary);
+
+    &__content {
+        list-style-type: none;
+        color: var(--color-primary);
+        font-size: 2rem;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 0;
+
+        &-item {
+            padding: 0 2rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: var(--color-grey-light-1);
+            }
+        }
+    }
+}
+
+.copyright {
+    color: var(--color-grey-light-1);
+    font-size: 1.5rem;
+    font-weight: 300;
+}

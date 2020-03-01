@@ -1,0 +1,128 @@
+.header {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(198, 153, 99, 0.5),
+            rgba(16, 29, 44, 0.8)
+        ),
+        url("../assets/img/hero.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    display: grid;
+    grid-template-rows: min-content 1fr min-content 1fr;
+
+    &__content {
+        grid-row: 3 / 4;
+
+        padding: 0 20rem;
+
+        &--welcome-text {
+            font-size: 2.4rem;
+            color: var(--color-grey-light-2);
+
+            &-animated {
+                animation-name: fade-in;
+                animation-duration: 2s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+                backface-visibility: hidden;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                font-size: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            padding: 0 10rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 5rem;
+            background-position-x: 45%;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 20rem;
+
+    &__logo {
+        height: 8rem;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-around;
+        color: var(--color-grey-light-2);
+        font-size: 2rem;
+        list-style: none;
+        letter-spacing: 1px;
+
+        &--1,
+        &--2,
+        &--3,
+        &--4,
+        &--5 {
+            padding: 0 3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+
+            &:hover:not(.navbar__items--cta) {
+                color: #ffffff;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 80%;
+                height: 2px;
+                background-color: #ffffff;
+                left: 50%;
+                bottom: -5px;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
+        }
+
+        &--cta {
+            padding: 0;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: none;
+            }
+        }
+
+        &--menu {
+            font-size: 4rem;
+            display: none;
+            color: #ffffff;
+
+            @media only screen and (max-width: $bp-medium) {
+                display: inline-block;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+        padding: 4rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem 5rem;
+    }
+}

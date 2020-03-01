@@ -13,15 +13,17 @@
             href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
             rel="stylesheet"
         />
-        <!-- Only for Dev: <link href="css/style.css" rel="stylesheet" /> -->
-        <link href="css/style.min.css" rel="stylesheet" />
+        <link href="sass/main.scss" rel="stylesheet" />
         <title>The Grand Hotel</title>
     </head>
     <body class="container">
         <header class="header">
             <nav class="navbar">
-                <!-- <img src="" alt="The Grand Hotel Logo" class="navbar__logo" /> -->
-                <span class="navbar__logo">GH</span>
+                <img
+                    src="assets/img/logo.svg"
+                    alt="The Grand Hotel Logo"
+                    class="navbar__logo"
+                />
                 <ul class="navbar__items">
                     <li class="navbar__items--1">
                         <a href="#about" class="navbar__items--link">
@@ -42,7 +44,7 @@
                         >
                     </li>
                     <li class="navbar__items--5 navbar__items--cta">
-                        <a role="button">Book now</a>
+                        <a class="btn--cta" role="button">Book now</a>
                     </li>
                     <li class="navbar__items--menu">
                         <i class="icon ion-md-menu"></i>
@@ -137,7 +139,7 @@
                         <i class="icon ion-logo-usd"></i>from 120
                     </li>
                 </ul>
-                <a href="#" class="room__cta"
+                <a href="/pages/standard-room-preview.html" class="room__cta"
                     >Book now<i class="icon ion-ios-arrow-round-forward"></i
                 ></a>
             </div>
@@ -151,12 +153,14 @@
                 </div>
                 <h3 class="heading-5">Deluxe Room</h3>
                 <ul class="room__features">
-                    <li class="room__features--1"><i class="icon ion-ios-expand"></i> 34m<sup>2</sup></li>
+                    <li class="room__features--1">
+                        <i class="icon ion-ios-expand"></i> 34m<sup>2</sup>
+                    </li>
                     <li class="room__features--2">
                         <i class="icon ion-logo-usd"></i>from 150
                     </li>
                 </ul>
-                <a href="#" class="room__cta"
+                <a href="/pages/deluxe-room-preview.html" class="room__cta"
                     >Book now<i class="icon ion-ios-arrow-round-forward"></i
                 ></a>
             </div>
@@ -170,12 +174,14 @@
                 </div>
                 <h3 class="heading-5">Junior Suite</h3>
                 <ul class="room__features">
-                    <li class="room__features--1"><i class="icon ion-ios-expand"></i> 50m<sup>2</sup></li>
+                    <li class="room__features--1">
+                        <i class="icon ion-ios-expand"></i> 50m<sup>2</sup>
+                    </li>
                     <li class="room__features--2">
                         <i class="icon ion-logo-usd"></i>from 210
                     </li>
                 </ul>
-                <a href="#" class="room__cta"
+                <a href="/pages/junior-suite-preview.html" class="room__cta"
                     >Book now<i class="icon ion-ios-arrow-round-forward"></i
                 ></a>
             </div>
